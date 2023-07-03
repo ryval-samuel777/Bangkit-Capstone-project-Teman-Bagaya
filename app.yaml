@@ -1,2 +1,5 @@
-runtime: python39
-service: frontend
+runtime: python311
+entrypoint: gunicorn -b :$PORT -w 2 server:app
+
+instance_class: F1 
+service: website
