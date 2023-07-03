@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+  <title>Teman Bagaya</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="container-item">
+      <nav class="navbar-container">
+        <div class="logo">
+          <a href="/">
+            <img src="{{ url_for('static', filename='assets/image/logo.png') }}" alt="Logo">
+          </a>
+
+        </div>
+        <ul>
+          <li><a href="/catalog">Catalog</a></li>
+          <li><a href="/detect">Detection</a></li>
+          <li><a href="/">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+      </section>
+    </main>
+
+    <main>
+      <section class="card main-content-a">
+        <div>
+          <h1>Click Me To Detect Your Fashion</h1>
+          <p>Teman Bagaya Tools for knowing what's Outfit You use, Click DETECT to know what's your outfit</p>
+          <a href="/detect" class="button-link">DETECT</a>
+
+          <h1>Go To Catalog</h1>
+          <p>We have some reference Fashion OOTD, Click the button below to check our catalog</p>
+          <a href="/catalog" class="button-link">Catalog</a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Teman Bagaya &copy; Team Capstone Project C23-PS012 - Bangkit 2023</p>
+    </footer>
+  </div>
+
+
+</body>
+
+</html>

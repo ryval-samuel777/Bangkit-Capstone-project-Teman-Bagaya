@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/details.css') }}">
+    <title>Teman Bagaya</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="container-item">
+            <nav class="navbar-container">
+                <div class="logo">
+                    <a href="/">
+                        <img src="{{ url_for('static', filename='assets/image/logo.png') }}" alt="Logo">
+                    </a>
+
+                </div>
+                <ul>
+                    <li><a href="/catalog">Catalog</a></li>
+                    <li><a href="/detect">Detection</a></li>
+                    <li><a href="/">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="image-item">
+                <img src="{{ item.image }}" alt="{{ item.name }}">
+            </section>
+        </main>
+
+        <main>
+            <section class="card main-content-a">
+                <h1>Item Details</h1>
+                <h2>{{ item.name }}</h2>
+                <p><strong>Category:</strong> {{ item.category }}</p>
+                <p><strong>Description:</strong> {{ item.description }}</p>
+                <p><strong>Store:</strong> <a class="button-link" href="{{ item.store }}" target="_blank">Buy</a></p>
+
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>Teman Bagaya &copy; Team Capstone Project C23-PS012 - Bangkit 2023</p>
+    </footer>
+
+</body>
+
+</html>

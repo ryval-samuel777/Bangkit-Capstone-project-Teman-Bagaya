@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/detect.css') }}">
+  <title>Detect Outfit</title>
+</head>
+
+<body>
+
+  <body>
+    <div class="container">
+      <header class="container-item">
+        <nav class="navbar-container">
+          <div class="logo">
+            <a href="/">
+              <img src="{{ url_for('static', filename='assets/image/logo.png') }}" alt="Logo">
+            </a>
+
+          </div>
+          <ul>
+            <li><a href="/catalog">Catalog</a></li>
+            <li><a href="/detect">Detection</a></li>
+            <li><a href="/">About</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div>
+          <form id="uploadForm" enctype="multipart/form-data" action="{{ url_for('upload') }}" method="POST"
+            class="form-container">
+            <h4>Upload your photo outfit</h4>
+            <label for="file-input" class="custom-file-upload">Choose File</label>
+            <input type="file" name="file" accept="image/*" id="file-input" class="file-input">
+            <button type="submit" class="submit-button">Submit</button>
+          </form>
+        </div>
+      </main>
+
+      <div class="result">
+        <div id="status"></div>
+
+        {% if name %}
+        <div class="item-result">
+          <div class="result-img card">
+            <img src="{{ image_url }}" alt="Product Image">
+          </div>
+
+          <div id="data" class="card">
+            <h1>Result</h1>
+            <p><strong>Name: </strong>{{ name }}</p>
+            {% if desc %}
+            <p><strong> Description: </strong>{{ desc }}</p>
+            {% endif %}
+            {% if category %}
+            <p><strong>Category: </strong>{{ category }}</p>
+            {% endif %}
+            {% if store %}
+            <a href="{{ store }}" class="button-link" target="_blank">Buy</a>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+
+
+      <footer>
+        <p>Teman Bagaya &copy; Team Capstone Project C23-PS012 - Bangkit 2023</p>
+      </footer>
+    </div>
+  </body>
+
+</html>

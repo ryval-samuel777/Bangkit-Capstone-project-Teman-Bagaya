@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/catalog.css') }}">
+  <title>Catalog</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="container-item">
+      <nav class="navbar-container">
+        <div class="logo">
+          <a href="/">
+            <img src="{{ url_for('static', filename='assets/image/logo.png') }}" alt="Logo">
+          </a>
+
+        </div>
+        <ul>
+          <li><a href="/catalog">Catalog</a></li>
+          <li><a href="/detect">Detection</a></li>
+          <li><a href="/">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <ul class="cardContainer">
+          {% for item in items %}
+          <a href="/detail/{{ item.name }}">
+            <li class="card">
+              <img src="{{ item.image }}" alt="Item Image">
+              <h2>{{ item.name }}</h2>
+            </li>
+          </a>
+          {% endfor %}
+        </ul>
+
+
+      </section>
+
+    </main>
+
+    <footer>
+      <p>Teman Bagaya &copy; Team Capstone Project C23-PS012 - Bangkit 2023</p>
+    </footer>
+
+  </div>
+
+
+</body>
+
+</html>
