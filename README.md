@@ -12,4 +12,16 @@ Team Member : 6<br>
 - (ML) M308DSY3626 - Ni Luh Ita Purnami
 - (CC) C333DSX4909 - Ryval Samuel Onibala
  
+## Structure Team 
+on the below is our team roles on this project 
+### Cloud Computing 
+this role work on branch cloud computing and focus this role is make backend and infrastructure application
 
+### Machine Learning 
+this role work on bracnh Machine Learning and focus this role is make an Model Machine Learning can detect fashion outfit OOTD
+
+### Mobile Development (inactive)
+this role focus on make an android application but this role left the team 
+
+### Web Development  
+this role focus to make a web application, And this role creating a web application as a replacement alternative for the Android application
